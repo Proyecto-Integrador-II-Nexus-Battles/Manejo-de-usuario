@@ -1,0 +1,52 @@
+body{
+    font-family: 'Segoe UI';
+    margin: 0px;
+}
+
+nav{
+    margin: 0px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px 0px 5px 20px ;
+    border-bottom: 7px solid #304c8b;
+    box-shadow: 0px 5px 8px -1px #A3A3A3;
+    font-size: 18px;
+}
+
+nav .logo{
+    
+    grid-area: 1/1/2/2;
+}
+
+nav a{
+    grid-area: span;
+    text-decoration: none;
+    color: black;
+}
+
+.sesion-bttn{
+    width: 40%;
+    background-color: #f1efef;
+    border-radius: 5px;
+    text-align: center;
+    color: #304c8b;
+    padding: 3px;
+    margin: 0px 20px;
+    margin: 0px 0px 0px 150px;
+
+}
+
+.user{
+
+    background-color: #f1efef;
+    padding: 10px;
+    margin: 10px;
+}
+
+.user p{
+    
+    display: inline-block;
+}
+img{
+    width:  50px;
+}
