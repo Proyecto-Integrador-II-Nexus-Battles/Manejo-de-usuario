@@ -6,7 +6,7 @@ body{
 nav{
     margin: 0px 0px 10px 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr;
     padding: 10px 0px 5px 20px ;
     border-bottom: 7px solid #304c8b;
     box-shadow: 0px 5px 8px -1px #A3A3A3;
@@ -22,31 +22,54 @@ nav a{
     grid-area: span;
     text-decoration: none;
     color: black;
+    margin: 20px;
 }
 
 .sesion-bttn{
-    width: 40%;
+    width: 50%;
     background-color: #f1efef;
     border-radius: 5px;
     text-align: center;
     color: #304c8b;
-    padding: 3px;
-    margin: 0px 20px;
-    margin: 0px 0px 0px 150px;
+    padding: 5px;
+    margin: 15px 0px 10px 150px;
 
 }
 
-.user{
-
-    background-color: #f1efef;
-    padding: 10px;
-    margin: 10px;
+table{
+    margin: 10px 10px 10px 10px;
+    width: 98.3%;
+    border-spacing: 0px 1rem;
 }
 
-.user p{
-    
-    display: inline-block;
-}
 img{
-    width:  50px;
+    padding: 10px 10px 0px 10px;
+    width:  70px;
+}
+
+td{
+    
+    background-color: #f1efef;
+}
+
+th{
+    padding: 10px;
+    color: white;
+    background-color:#a3b7dc;
+}
+
+.searchBar{
+
+    margin: 10px 0px 0px 10px;
+}
+
+label{
+
+    margin: 10px 0px 0px 10px;
+}
+
+.logo{
+    border-right: 2px solid #f1efef ;
+    margin: 0px;
+    padding: 0px;
 }
