@@ -13,7 +13,9 @@
   <body>
     <nav>
       <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo" /></a>
-      <a href="" class="bttn">Lista&nbsp;de&nbsp;usuarios</a>
+      <a href="admin_main_page.html" class="bttn"
+        >Lista&nbsp;de&nbsp;usuarios</a
+      >
       <a href="" class="btton">Usuarios&nbsp;baneados</a>
       <a class="sesion-bttn"
         >Cerrar&nbsp;sesión&nbsp;<i class="fa-solid fa-circle-user"></i>
@@ -62,5 +64,14 @@
 
     <button class="bton-ban">Dar de baja</button>
     <button class="bton-ban">Banear</button>
+
+    <div class="window-notice" id="window-notice">
+      <div class="content">
+        <div class="content-text">¿Quieres banear a este usuario?</div>
+        <div class="content-buttons">
+          <a href="user_review.html" id="close-button" onclick="">Aceptar</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
