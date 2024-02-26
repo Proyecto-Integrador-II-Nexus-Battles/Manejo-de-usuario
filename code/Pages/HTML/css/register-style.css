@@ -1,47 +1,65 @@
 body{
     background-image: url(/Register/background.jpg);
-    padding: 0px 2%;
+    padding: 10px 2%;
 }
 
 main{
     background-color: rgba(9, 32, 43, 0.74);
-    padding: 0px 2%;
+    padding: 1px 2%;
 }
 h1{
     color: white;
+    font-size: 450%;
 }
 
 form{
     display: flex;
+    margin-right: 5%;
+    width: 100%;
 }
 
-label{
-    color: white;
+.container{
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
 .col{
     display: flex;
     flex-direction: column;
-    margin-right: 30%;
     gap: 10px;
+    width: 100%;
+}
+
+label{
+    color: white;
+    font-size: x-large;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input{
+    width: 60%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 img{
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: auto;
+    margin-right: 8%;
 }
 
-.a{
-    display: flex;
-    gap: 35%;
-}
 
-@media(max-width: 450px){
+@media(max-width: 550px){
     h1{
-        margin-top: 130px;
+        margin-top: 190px;
+        justify-content: center;
     }
     form{
         flex-direction: column;
+        align-items: center;
     }
     img{
         position:absolute;
