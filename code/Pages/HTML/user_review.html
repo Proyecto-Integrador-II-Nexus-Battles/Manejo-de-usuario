@@ -62,14 +62,28 @@
       </table>
     </div>
 
-    <button class="bton-ban" onclick="PopUp()">Dar de baja</button>    
-    <button class="bton-ban">Banear</button>
+    <div class="ban">
+      <button class="bton-ban" onclick="PopUp()" id="baja">Dar de baja</button>    
+      <button class="bton-ban" id="ban" onclick="Ban()" >Banear</button>
+        <form action="localhost" method="post" style="display: none;" id="FormBan">
+          <p>Elige una opción para el ban:</p>
+          <input type="radio" id="temporal" name="ban_type" value="temporal" />  
+          <label for="temporal">Temporal</label><br />
+          <input type="radio" id="css" name="ban_type" value="permanente" />  
+          <label for="permanente">Permanente</label><br />
+          <a id="apply-button" class="bton-ban" onclick="PopUp()">Aplicar</a>
+          <a id="cancel-button" class="bton-ban">Cancelar</a>   
+          
+        </form>
+        
+    </div>
+   
 
-       
+    
     <div class="window-notice" id="window-notice" style="display: none">
       <div class="content">
         <div class="content-text">
-          >>¿Estás seguro de que deseas restringir el acceso a la cuenta de este
+          ¿Estás seguro de que deseas restringir el acceso a la cuenta de este
           usuario?
         </div>
         <div class="content-buttons">
@@ -79,6 +93,7 @@
       </div>
     </div>
 
+    
     <script src="js/animation.js"></script>
   </body>
 </html>

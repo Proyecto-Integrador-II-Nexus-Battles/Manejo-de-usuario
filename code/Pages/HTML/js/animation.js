@@ -15,6 +15,25 @@ function PopUp() {
     }
 }
 
+function Ban(){
+
+    const drawbttn= document.getElementById("cancel-button");
+    const modal= document.getElementById("FormBan")
+
+    drawbttn.addEventListener("click", function(){
+
+            modal.style.display="none";
+    });
+
+    if(modal.style.display==='none'){
+        modal.style.display="block";
+
+    }else{
+        modal.style.display="none";
+    }
+
+}
+
 
 
 
