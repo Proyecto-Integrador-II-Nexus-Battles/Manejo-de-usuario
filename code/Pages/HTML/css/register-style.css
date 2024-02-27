@@ -1,94 +1,193 @@
-body{
-    background-image: url(/Register/background.jpg);
+body {
+    background-image: url(/code/Pages/HTML/img/Background.jpg);
     padding: 10px 2%;
+    background-size: cover;
 }
 
-main{
+main {
     background-color: rgba(9, 32, 43, 0.74);
+    border-radius: 14px;
     padding: 1px 2%;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 450%;
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
     align-items: center;
 }
 
-form{
+form {
     display: flex;
+    flex-direction: column;
     margin-right: 0%;
     width: 50%;
     margin-right: 10%;
 }
 
+.col_container {
+    display: flex;
+    width: 100%;
+}
 
-.col{
+.col {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
 
-p{
+p {
     color: #C3C3C3;
     margin: 0px;
 }
 
-label{
+label {
     color: white;
     font-size: x-large;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-input{
+input {
     width: 80%;
     height: 40px;
     border-radius: 10px;
     border: none;
+    font-size: larger;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.file_input_container{
+.file_input_container {
     display: flex;
 }
 
-.file_input{
+.file_input {
     box-shadow: none;
     margin-left: 5px;
 }
 
-img{
+img {
     width: 350px;
+    height: auto;
+    align-self: flex-start;
+}
+
+.metodo_pago {
+    margin-top: 30px;
+}
+
+.svg_container {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0px 10px 0px;
+}
+
+.visa {
+    width: 50px;
+    height: auto;
+    fill: white;
+}
+
+.paypal {
+    width: 35px;
+    height: auto;
+    fill: white;
+}
+
+.pago_radio_btn {
+    box-shadow: none;
+    width: 25px;
     height: auto;
 }
 
+.card {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(9, 32, 43, 0.74);
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px 25px;
+    width: 47%;
+}
 
-@media(max-width: 500px){
-    main{
+.cvv_input {
+    width: 20%;
+}
+
+.date_input {
+    width: 50%;
+}
+
+h2 {
+    color: white;
+    font-size: 250%;
+    margin-bottom: 0px;
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn_submit {
+    justify-content: center;
+    align-items: center;
+    background-color: #789DCA;
+    color: white;
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 25px;
+    margin-left: 80%;
+}
+
+@media(max-width: 500px) {
+    body {
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    main {
         padding: 5%;
         font-size: 80%;
     }
-    h1{
+
+    h1 {
         margin-top: 250px;
         text-align: center;
     }
-    form{
+
+    form {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
         margin-left: 15px;
     }
-    .col{
+
+    .col {
         margin-bottom: 10px;
     }
-    img{
-        position:absolute;
+
+    .col_container {
+        flex-direction: column;
+    }
+
+    img {
+        position: absolute;
         top: 0px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .btn_submit {
+        width: 82%;
+        margin-left: 0;
     }
 }
