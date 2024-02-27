@@ -7,15 +7,10 @@ main{
     background-color: rgba(9, 32, 43, 0.74);
     padding: 1px 2%;
 }
+
 h1{
     color: white;
     font-size: 450%;
-}
-
-form{
-    display: flex;
-    margin-right: 5%;
-    width: 100%;
 }
 
 .container{
@@ -24,11 +19,24 @@ form{
     align-items: center;
 }
 
+form{
+    display: flex;
+    margin-right: 0%;
+    width: 50%;
+    margin-right: 10%;
+}
+
+
 .col{
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+}
+
+p{
+    color: #C3C3C3;
+    margin: 0px;
 }
 
 label{
@@ -38,28 +46,46 @@ label{
 }
 
 input{
-    width: 60%;
+    width: 80%;
     height: 40px;
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.file_input_container{
+    display: flex;
+}
+
+.file_input{
+    box-shadow: none;
+    margin-left: 5px;
+}
+
 img{
-    width: 250px;
+    width: 350px;
     height: auto;
-    margin-right: 8%;
 }
 
 
-@media(max-width: 550px){
+@media(max-width: 500px){
+    main{
+        padding: 5%;
+        font-size: 80%;
+    }
     h1{
-        margin-top: 190px;
-        justify-content: center;
+        margin-top: 250px;
+        text-align: center;
     }
     form{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 15px;
+    }
+    .col{
+        margin-bottom: 10px;
     }
     img{
         position:absolute;
