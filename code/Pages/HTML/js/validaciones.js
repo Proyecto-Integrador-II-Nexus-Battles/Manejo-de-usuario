@@ -12,7 +12,7 @@ function LimitarCaracteres(event) {
 }
 
 
-function validarContraseña() {
+function ValidarContraseña() {
     const password = document.getElementById('password');
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]+$/;
 
@@ -33,7 +33,7 @@ function validarContraseña() {
     }
 }
 
-function limit_number(event) {
+function LimitarNumeros(event) {
     const inputValue = event.key;
     const regex = /^[0-9]+$/;
 
@@ -44,7 +44,7 @@ function limit_number(event) {
     }
 }
 
-function validarArchivo() {
+function ValidarArchivo() {
     const archivoInput = document.getElementById('avatar');
     const archivo = archivoInput.files[0];
     const extensionesPermitidas = /\.(jpg|png)$/i;
@@ -61,4 +61,18 @@ function validarArchivo() {
     archivoInput.setCustomValidity('');
     return true;
 
+}
+
+function ValidarFecha() {
+    const FechaExp = document.getElementById('fecha_exp').value;
+    const FechaAct = new Date();
+
+    const [year, month] = FechaExp.split('-');
+    const fechaVencimiento = new Date(parseInt(year), parseInt(month) - 1);
+
+    if (fechaVencimiento <= FechaAct) {
+        document.getElementById('fecha_exp').setCustomValidity('No puede ser una fecha menor o igual a la actual');
+    } else {
+        document.getElementById('fecha_exp').setCustomValidity('');
+    }
 }
