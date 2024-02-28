@@ -13,16 +13,14 @@
   <body>
     <nav>
       <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo" /></a>
-      <a href="admin_main_page.html" class="bttn"
-        >Lista&nbsp;de&nbsp;usuarios</a
-      >
+      <a href="/hola" class="bttn">Lista&nbsp;de&nbsp;usuarios</a>
       <a href="" class="btton">Usuarios&nbsp;baneados</a>
       <a class="sesion-bttn"
         >Cerrar&nbsp;sesión&nbsp;<i class="fa-solid fa-circle-user"></i>
       </a>
     </nav>
 
-    <a href="admin_main_page.html" class="back"
+    <a href="/hola" class="back"
       ><i class="fa-solid fa-arrow-left"></i> Volver</a
     >
 
@@ -63,23 +61,20 @@
     </div>
 
     <div class="ban">
-      <button class="bton-ban" onclick="PopUp()" id="baja">Dar de baja</button>    
-      <button class="bton-ban" id="ban" onclick="Ban()" >Banear</button>
-        <form action="localhost" method="post" style="display: none;" id="FormBan">
-          <p>Elige una opción para el ban:</p>
-          <input type="radio" id="temporal" name="ban_type" value="temporal" />  
-          <label for="temporal">Temporal</label><br />
-          <input type="radio" id="css" name="ban_type" value="permanente" />  
-          <label for="permanente">Permanente</label><br />
-          <a id="apply-button" class="bton-ban" onclick="PopUp()">Aplicar</a>
-          <a id="cancel-button" class="bton-ban">Cancelar</a>   
-          
-        </form>
-        
+      <button class="bton-ban" onclick="PopUp()" id="baja">Dar de baja</button>
+         
+      <button class="bton-ban" id="ban" onclick="Ban()">Banear</button>
+      <form action="localhost" method="post" style="display: none" id="FormBan">
+        <p>Elige una opción para el ban:</p>
+        <input type="radio" id="temporal" name="ban_type" value="temporal" />  
+        <label for="temporal">Temporal</label><br />
+        <input type="radio" id="css" name="ban_type" value="permanente" />  
+        <label for="permanente">Permanente</label><br />
+        <a id="apply-button" class="bton-ban" onclick="PopUp()">Aplicar</a>
+        <a id="cancel-button" class="bton-ban">Cancelar</a>
+      </form>
     </div>
-   
 
-    
     <div class="window-notice" id="window-notice" style="display: none">
       <div class="content">
         <div class="content-text">
@@ -93,7 +88,6 @@
       </div>
     </div>
 
-    
     <script src="js/animation.js"></script>
   </body>
 </html>
