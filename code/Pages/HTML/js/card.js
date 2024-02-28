@@ -1,7 +1,7 @@
 function card_display() {
     const visaRadio = document.getElementById('visa');
     const cardDiv = document.querySelector('.card');
-    const nombreTarjetaInput = document.getElementById('nombre_tarjeta');
+    const nombreTarjetaInput = document.getElementById('numero_tarjeta');
     const cvvInput = document.getElementById('cvv');
     const fechaExpInput = document.getElementById('fecha_exp');
 
