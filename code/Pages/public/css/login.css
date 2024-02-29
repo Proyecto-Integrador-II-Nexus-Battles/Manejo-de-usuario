@@ -21,14 +21,14 @@ body {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .login-container {
-  --color: #000000d8 ;
+  --color: #000000e1 ;
   background-color: var(--color);
   box-shadow: 0 0 15px 0 var(--color);
   padding: 40px 30px;
@@ -120,3 +120,4 @@ body {
 .login-button:focus {
   background-color: hsl(var(--primary-hsl), .4);
 }
+
