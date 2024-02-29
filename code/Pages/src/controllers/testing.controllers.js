@@ -15,3 +15,7 @@ export const defaultR3 = (req, res) => {
     res.render("user_review");
 };
 
+export const defaultR4 = (req, res) => {
+    res.render("register");
+};
+
