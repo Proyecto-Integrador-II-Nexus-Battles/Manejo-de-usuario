@@ -1,13 +1,13 @@
 {
   "name": "pages",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "16.4.5",
     "ejs": "^3.1.9",
     "express": "^4.18.3",
@@ -19,5 +19,6 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "delay": "nodemon --delay 1000 src/app.js"
-  }
+  },
+  "description": ""
 }
