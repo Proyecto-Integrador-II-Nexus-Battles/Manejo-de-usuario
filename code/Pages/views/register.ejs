@@ -20,7 +20,7 @@
                         <label for="apellido">Apellidos</label>
                         <input type="text" name="apellido" id="apellido" maxlength="50" oninput="LimitarCaracteres(event)" required>
                         <label for="username">Apodo</label>
-                        <input type="text" name="username" id="username" maxlength="50" required>
+                        <input type="text" name="username" id="username" maxlength="50" oninput="ValidarNombreUsuario()" required>
                         <p>Este apodo se mostrará en el juego. <br>El apodo no puede ser ofensivo. </p>
                     </div>
                     <div class="col">
@@ -31,7 +31,7 @@
                         <p>Longitud de minimo 8 caracteres incluyendo minisculas, mayusculas, caracteres y numeros.</p>
                         <div class="file_input_container">
                             <label for="avatar" required>Avatar</label>
-                            <input type="file" name="avatar" id="avatar" class="file_input" accept=".jpg, .png" required onchange="ValidarArchivo()">
+                            <input type="file" name="avatar" id="avatar" class="file_input" accept=".jpg, .png" onchange="ValidarArchivo()" required>
                         </div>
                         <p>Solo se permiten archivos .jpg y .png de maximo 500 kbs.</p>
                     </div>

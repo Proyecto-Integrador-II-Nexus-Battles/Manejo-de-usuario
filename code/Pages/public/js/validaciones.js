@@ -76,3 +76,29 @@ function ValidarFecha() {
         document.getElementById('fecha_exp').setCustomValidity('');
     }
 }
+
+function ValidarNombreUsuario() {
+    const inputUsuario = document.getElementById('username')
+
+    fetch('ApodosInhabilitados.json')
+        .then(function (res){
+            return res.json();
+        })
+        .then(function(data){
+            let flag = false;
+            let value = inputUsuario.value.replace(/\s/g, "").toLowerCase();
+            data.forEach(function(nombre){
+                if (value.includes(nombre.name.toLowerCase())) {
+                    flag = true;
+                }
+            });
+            if (flag) {
+                inputUsuario.setCustomValidity('El apodo contiene una palabra la cual no es permitida');
+            } else {
+                inputUsuario.setCustomValidity("");
+            }
+        })
+        .catch(function(error) {
+            console.error('Error al cargar el JSON:', error);
+        });
+}
