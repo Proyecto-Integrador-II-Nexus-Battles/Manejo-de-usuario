@@ -1,7 +1,6 @@
 {
   "name": "pages",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "keywords": [],
   "author": "",
@@ -20,5 +19,6 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "delay": "nodemon --delay 1000 src/app.js"
-  }
+  },
+  "description": ""
 }
