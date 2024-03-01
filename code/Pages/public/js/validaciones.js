@@ -14,17 +14,17 @@ function LimitarCaracteres(event) {
 
 function ValidarContraseña() {
     const password = document.getElementById('password');
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]+$/;
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/;
 
     if (!regex.test(password.value)) {
         if (!/(?=.*[a-z])/.test(password.value)) {
-            password.setCustomValidity("La contraseña debe contener al menos un miniscula.");
+            password.setCustomValidity("La contraseña debe contener al menos una minúscula.");
         } else if (!/(?=.*[A-Z])/.test(password.value)) {
             password.setCustomValidity("La contraseña debe contener al menos una mayúscula.");
         } else if (!/(?=.*\d)/.test(password.value)) {
-            password.setCustomValidity("La contraseña debe contener al menos un numero.");
-        } else if (!/(?=.*[$@$!%*?&])/.test(password.value)) {
-            password.setCustomValidity("La contraseña debe contener al menos un carácter especial ($@$!%*?&).");
+            password.setCustomValidity("La contraseña debe contener al menos un número.");
+        } else if (!/(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/.test(password.value)) {
+            password.setCustomValidity("La contraseña debe contener al menos un carácter especial.");
         }
         return false;
     } else {
