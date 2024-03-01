@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const express = require("express");
 const app = express();
 
 app.use(express.static(path.join(__dirname, "..", "public")));
