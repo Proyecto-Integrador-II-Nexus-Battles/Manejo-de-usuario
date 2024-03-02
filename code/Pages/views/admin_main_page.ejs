@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width= initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/3ac659e2f1.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Administrador</title>
-    <link rel="stylesheet" href="css/admin-style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/3ac659e2f1.js" crossorigin="anonymous"></script>
+  <title>Administrador</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/admin-main-page.css" />
+</head>
+
+<body>
+  <header>
     <nav>
-      <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo" /></a>
-      <a href="/user" class="bttn">Lista&nbsp;de&nbsp;usuarios</a>
-      <a href="" class="btton">Usuarios&nbsp;baneados</a>
-      <a class="sesion-bttn"
-        >Cerrar&nbsp;sesión&nbsp;<i class="fa-solid fa-circle-user"></i>
-      </a>
+      <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo"></a>
+      <a href="admin_main_page.html" class="bttn">Lista usuarios</a>
+      <a href="" class="btton">Usuarios baneados</a>
+      <a class="sesion_btn">Cerrar sesión<i class="fa-solid fa-circle-user sesion_icon"></i></a>
     </nav>
-    <div>
-      <label for="buscar">Buscar usuario</label><br />
-      <input type="text" class="searchBar" name="buscar" />
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
+  </header>
+
+  <main>
+
+    <div class="search_container">
+      <input type="text" name="search" id="search" class="search_bar" placeholder="Buscar usuario">
+      <button type="submit" class="search_btn">Buscar</button>
     </div>
-    <section class="grid">
-      <table>
-        <th>Imagen</th>
-        <th>Apodo</th>
-        <tr>
-          <td width="20%">
-            <a href="/user">
-              <img src="img/user1.jpg" alt="user-icon" />
-            </a>
-          </td>
 
-          <td>Usuario 1</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="img/user1.jpg" alt="user-icon" />
-          </td>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <% for (let i = 0; i < usernames.length; i += 6) { %>
+          <div class="swiper-slide">
+            <% for (let j = i; j < Math.min(i + 6, usernames.length); j++) { %>
+              <article class="user_article">
+                <i class="fa-solid fa-circle-user user_icon"></i>
+                <p class="user_apodo"><%= usernames[j] %></p>
+              </article>
+            <% } %>
+          </div>
+        <% } %>      
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </main>
 
-          <td>Usuario 2</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="img/user1.jpg" alt="user-icon" />
-          </td>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/user_review.js"></script>
+</body>
 
-          <td>Usuario 3</td>
-        </tr>
-      </table>
-    </section>
-  </body>
 </html>

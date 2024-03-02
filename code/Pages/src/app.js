@@ -28,7 +28,7 @@ app.use((req, res) => {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "..", "views"));
 app.listen(PORT);
-console.log(`Server is running on port ${PORT}`);
+console.log(`Server is running on port http://localhost:${PORT}`);
 //registro (kind of)
 
 export default app;

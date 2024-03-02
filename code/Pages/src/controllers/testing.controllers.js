@@ -5,15 +5,14 @@ import { pool } from "../db.js";
 import { json } from "express";
 
 export const defaultR = (req, res) => {
-
     res.render("login");
 
-
 };
 
-export const defaultR2 = (req, res) => {
-    res.render("admin_main_page");
-};
+// export const defaultR2 = async (req, res) => {
+//     const usernames = await pool.query("SELECT nombre FROM users")
+//     res.render("admin_main_page");
+// };
 
 export const defaultR3 = (req, res) => {
     res.render("user_review");
@@ -21,8 +20,21 @@ export const defaultR3 = (req, res) => {
 
 export const defaultR4 = async (req, res) => {
     res.render('register');
-
 }
+
+export const obtenerNombresDeUsuario = async (req, res) => {
+    try {
+        const usernamesResult = await pool.query("SELECT nombre FROM users");
+        const usernames = usernamesResult.map(row => row.nombre);
+        
+        res.render('admin_main_page', { usernames: usernames });
+    } catch (error) {
+        // Manejo de errores
+        console.error('Error al obtener nombres de usuario:', error);
+        res.status(500).send('Error interno del servidor');
+    }
+};
+
 
 export const login = async (req, res) => {
     console.log("holis")
@@ -65,7 +77,7 @@ export const registro = async (req, res) => {
 
     try {
         pool.query(
-            "INSERT INTO sofia.users(nombre, apellido, email, password, metodospago,numero_tarjeta,cvv,fecha_exp,pregunta_1,pregunta_2,pregunta_3) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            "INSERT INTO test.users(nombre, apellido, email, password, metodospago,numero_tarjeta,cvv,fecha_exp,pregunta_1,pregunta_2,pregunta_3) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
             [nombre, apellido, email, password, metodospago, numero_tarjeta, cvv, fecha_exp, pregunta_1, pregunta_2, pregunta_3],
 
             (err, result) => {
