@@ -22,7 +22,7 @@ app.use(testingRoutes);
 
 app.use((req, res) => {
     res.status(404).json({
-        message: "Endpoint not found",
+        message: "Endpoint not found!!!!",
     });
 });
 app.set("view engine", "ejs");

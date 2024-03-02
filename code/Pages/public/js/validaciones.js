@@ -12,7 +12,7 @@ function LimitarCaracteres(event) {
 }
 
 
-function ValidarContraseña() {
+function ValidarContrasena() {
     const password = document.getElementById('password');
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]+$/;
 
