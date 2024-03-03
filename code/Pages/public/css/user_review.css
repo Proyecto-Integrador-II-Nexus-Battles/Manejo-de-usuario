@@ -123,6 +123,8 @@ form{
     border: 3px solid #304c8b;
     line-height: 25px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 form p{
@@ -136,6 +138,31 @@ label{
 
 #apply-button{
     margin-bottom: 0px;
+}
+
+.window-notice {
+    background: rgba(33, 41, 52, .85);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+}
+
+.content {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25%;
+    padding: 2rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    top: 30%;
+    left: 35%;
 }
 
 
@@ -220,6 +247,14 @@ label{
     }
 
     .ban{
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .bton-ban{
+        width: 80%;
+    }
+    form{
         align-items: center;
     }
 }
