@@ -21,6 +21,12 @@ async function buscarUsuarios() {
           <i class="fa-solid fa-circle-user user_icon"></i>
           <p class="user_apodo">${usuario.nombre}</p>
         `;
+
+        // Add a click event listener to the user article
+        userElement.addEventListener('click', () => {
+          user_review(); // Call your user_review function
+        });
+
         return userElement;
       }
 
@@ -42,4 +48,8 @@ async function buscarUsuarios() {
   } catch (error) {
     console.error('Error en la solicitud:', error);
   }
+}
+
+function user_review() {
+  window.location.href = "/user";
 }

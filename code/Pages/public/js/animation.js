@@ -1,38 +1,33 @@
-
 function PopUp() {
+    const modal = document.getElementById("window-notice");
+    modal.style.display = "block";
+}
 
-    const closeButton = document.getElementById("close-button");
-    const modal = document.getElementById("window-notice"); // Add click event listener to the close button
+function closeModal() {
+    const modal = document.getElementById("window-notice");
+    modal.style.display = "none";
+}
 
-    closeButton.addEventListener("click", function () {
-        modal.style.display = "none"; // Hide the modal
-    });
+function submitForm() {
+    const modal = document.getElementById("FormBan");
+    modal.submit();
+}
 
-    if (modal.style.display === "none") {
+
+function Ban() {
+    const modal = document.getElementById('FormBan');
+    const PermBtn = document.getElementById('perm');
+    const TempBtn = document.getElementById('temp');
+
+    if (modal.style.display === 'none') {
         modal.style.display = "block";
     } else {
         modal.style.display = "none";
+        PermBtn.checked = false;
+        TempBtn.checked = false;
     }
 }
 
-function Ban(){
-
-    const drawbttn= document.getElementById("cancel-button");
-    const modal= document.getElementById("FormBan")
-
-    drawbttn.addEventListener("click", function(){
-
-            modal.style.display="none";
-    });
-
-    if(modal.style.display==='none'){
-        modal.style.display="block";
-
-    }else{
-        modal.style.display="none";
-    }
-
-}
 
 
 

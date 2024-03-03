@@ -31,7 +31,7 @@
         <% for (let i = 0; i < usernames.length; i += 5) { %>
         <div class="swiper-slide">
           <% for (let j = i; j < Math.min(i + 5, usernames.length); j++) { %>
-          <article class="user_article">
+          <article class="user_article" onclick="user_review()">
             <i class="fa-solid fa-circle-user user_icon"></i>
             <p class="user_apodo"><%= usernames[j] %></p>
           </article>

@@ -1,77 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/admin-style.css" />
-    <title>Usuario</title>
-    <script
-      src="https://kit.fontawesome.com/3ac659e2f1.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/user_review.css" />
+  <title>Usuario</title>
+  <script src="https://kit.fontawesome.com/3ac659e2f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
     <nav>
-      <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo" /></a>
-      <a href="/hola" class="bttn">Lista&nbsp;de&nbsp;usuarios</a>
-      <a href="" class="btton">Usuarios&nbsp;baneados</a>
-      <a class="sesion-bttn"
-        >Cerrar&nbsp;sesión&nbsp;<i class="fa-solid fa-circle-user"></i>
-      </a>
+      <a href="" class="logo"><img src="img/logo_nb2_v2.png" alt="Logo"></a>
+      <a href="/admin" class="bttn">Lista usuarios</a>
+      <a href="" class="btton">Usuarios baneados</a>
+      <a class="sesion_btn">Cerrar sesión<i class="fa-solid fa-circle-user sesion_icon"></i></a>
     </nav>
+  </header>
 
-    <a href="/hola" class="back"
-      ><i class="fa-solid fa-arrow-left"></i> Volver</a
-    >
+  <main>
+    <a href="/admin" class="back"><i class="fa-solid fa-chevron-left back_icon"></i></i> Volver</a>
 
-    <div class="user-container">
-      <table>
-        <tr>
-          <td width="15%">
-            <img src="img/user1.jpg" alt="logo-user" />
-          </td>
-          <td>
-            <p>User 1</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Nombre:</p>
-          </td>
-          <td>
-            <p></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Apellido:</p>
-          </td>
-          <td><p></p></td>
-        </tr>
-        <tr>
-          <td><p>Email:</p></td>
-          <td><p></p></td>
-        </tr>
-        <tr>
-          <td>
-            <p>Método de pago:</p>
-          </td>
-        </tr>
-      </table>
+    <div class="user_container">
+      <div class="img_user_container">
+        <img src="../img/Background.jpg" alt="avatar" class="user_avatar">
+        <h1 id="username">Usuario 1</h1>
+      </div>
+      <div class="info_container">
+        <div class="info">
+          <h2>Nombre</h2>
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="info">
+          <h2>Apellidos</h2>
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="info">
+          <h2>Email</h2>
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="info">
+          <h2>Metodo de pago</h2>
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
     </div>
 
     <div class="ban">
       <button class="bton-ban" onclick="PopUp()" id="baja">Dar de baja</button>
-         
       <button class="bton-ban" id="ban" onclick="Ban()">Banear</button>
-      <form action="localhost" method="post" style="display: none" id="FormBan">
+      <form action="localhost" method="post" id="FormBan" style="display: none;">
         <p>Elige una opción para el ban:</p>
-        <input type="radio" id="temporal" name="ban_type" value="temporal" />  
-        <label for="temporal">Temporal</label><br />
-        <input type="radio" id="css" name="ban_type" value="permanente" />  
-        <label for="permanente">Permanente</label><br />
-        <a id="apply-button" class="bton-ban" onclick="PopUp()">Aplicar</a>
-        <a id="cancel-button" class="bton-ban">Cancelar</a>
+        <input type="radio" id="temp" name="ban_type" value="temporal" required>
+        <label for="temporal">Temporal</label><br>
+        <input type="radio" id="perm" name="ban_type" value="permanente" required>
+        <label for="permanente">Permanente</label><br>
+        <input type="submit" id="apply-button" class="bton-ban" value="Aplicar" onclick="PopUp()">
       </form>
     </div>
 
@@ -82,12 +67,16 @@
           usuario?
         </div>
         <div class="content-buttons">
-          <button id="close-button" class="bton-ban">Cancelar</button>
-          <button id="accept-button" class="bton-ban">Aceptar</button>
+          <button id="close-button" class="bton-ban" onclick="closeModal()">Cancelar</button>
+          <button id="accept-button" class="bton-ban" onclick="submitForm()">Aceptar</button>
         </div>
       </div>
     </div>
 
-    <script src="js/animation.js"></script>
-  </body>
+  </main>
+
+  <script src="js/animation.js"></script>
+
+</body>
+
 </html>
