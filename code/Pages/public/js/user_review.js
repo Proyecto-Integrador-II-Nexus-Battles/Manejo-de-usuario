@@ -1,3 +1,3 @@
-function user_review() {
-    window.location.href = "/user";
-  }
+function UserReview(username) {
+  window.location.href = `/user/${username}`;
+}

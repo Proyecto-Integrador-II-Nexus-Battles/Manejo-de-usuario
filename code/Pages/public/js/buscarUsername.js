@@ -5,7 +5,6 @@ async function buscarUsuarios() {
   const query = searchInput.value;
   const userList = document.querySelector('.swiper-wrapper');
   userList.innerHTML = '';
-  try {
     const response = await fetch(`/buscar_usuario?q=${query}`);
     if (response.ok) {
       const data = await response.json();
@@ -21,10 +20,8 @@ async function buscarUsuarios() {
           <i class="fa-solid fa-circle-user user_icon"></i>
           <p class="user_apodo">${usuario.nombre}</p>
         `;
-
-        // Add a click event listener to the user article
         userElement.addEventListener('click', () => {
-          user_review(); // Call your user_review function
+          UserReview(usuario.nombre)
         });
 
         return userElement;
@@ -32,8 +29,8 @@ async function buscarUsuarios() {
 
       data.forEach(usuario => {
         if (slide.childElementCount === 5) {
-          userList.appendChild(slide); // Agrega el slide actual
-          slide = document.createElement('div'); // Crea un nuevo slide
+          userList.appendChild(slide);
+          slide = document.createElement('div');
           slide.className = 'swiper-slide';
         }
         slide.appendChild(createUserElement(usuario));
@@ -45,11 +42,9 @@ async function buscarUsuarios() {
     } else {
       console.error('Error al obtener resultados de búsqueda:', response.status);
     }
-  } catch (error) {
-    console.error('Error en la solicitud:', error);
-  }
+
 }
 
-function user_review() {
-  window.location.href = "/user";
+function UserReview(username) {
+  window.location.href = `/user/${username}`;
 }

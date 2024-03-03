@@ -1,11 +1,11 @@
 import { Router } from "express"
-import { defaultR, defaultR3, defaultR4, login, registro, GetUsername, BuscarUsername } from "../controllers/testing.controllers.js"
+import { defaultR, defaultR4, login, registro, getUsername, buscarUsername, getUserInfoController } from "../controllers/testing.controllers.js"
 
 const router = Router();
 router.get('/', defaultR);
-router.get('/admin', GetUsername);
-router.get('/buscar_usuario', BuscarUsername);
-router.get('/user', defaultR3);
+router.get('/admin', getUsername);
+router.get('/buscar_usuario', buscarUsername);
+router.get('/user/:username', getUserInfoController);
 router.get('/register', defaultR4);
 router.post('/registro', registro);
 router.post('/logging', login);

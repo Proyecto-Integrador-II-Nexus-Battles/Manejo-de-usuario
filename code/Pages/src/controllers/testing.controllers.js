@@ -3,6 +3,7 @@ import { fileURLToPath } from "url";
 import bcrypt from 'bcrypt';
 import { pool } from "../db.js";
 import { json } from "express";
+import { getUsers, searchUsers, getUserInfo } from '../models/testing.models.js';
 
 export const defaultR = (req, res) => {
     res.render("login");
@@ -14,24 +15,29 @@ export const defaultR = (req, res) => {
 //     res.render("admin_main_page");
 // };
 
-export const defaultR3 = (req, res) => {
-    res.render("user_review");
-};
+// export const defaultR3 = (req, res) => {
+//     res.render("user_review");
+// };
 
 export const defaultR4 = async (req, res) => {
     res.render('register');
 }
 
-export const GetUsername = async (req, res) => {
-    const usernamesResult = await pool.query("SELECT nombre FROM users");
-    const usernames = usernamesResult.map(row => row.nombre);
+export const getUsername = async (req, res) => {
+    const usernames = await getUsers();
     res.render('admin_main_page', { usernames: usernames });
 };
 
-export const BuscarUsername = async (req, res) => {
+export const buscarUsername = async (req, res) => {
     const query = req.query.q;
-    const resultados = await pool.query("SELECT nombre FROM users WHERE nombre LIKE ?", [`${query}%`]);
+    const resultados = await searchUsers(query);
     res.json(resultados);
+};
+
+export const getUserInfoController = async (req, res) => {
+    const username = req.params.username;
+    const user = await getUserInfo(username);
+    res.render('user_review', { user: user });
 };
 
 

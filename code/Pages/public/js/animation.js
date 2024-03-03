@@ -8,12 +8,6 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-function submitForm() {
-    const modal = document.getElementById("FormBan");
-    modal.submit();
-}
-
-
 function Ban() {
     const modal = document.getElementById('FormBan');
     const PermBtn = document.getElementById('perm');

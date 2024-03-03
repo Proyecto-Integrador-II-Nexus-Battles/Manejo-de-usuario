@@ -38,71 +38,71 @@ a {
     color: #304C8B;
 }
 
-main{
+main {
     padding: 10px 2%;
 }
 
-.back_icon{
+.back_icon {
     font-size: large;
     padding-top: 4px;
 }
 
 .back {
     display: flex;
-    align-items: center;    
+    align-items: center;
     font-size: 25px;
     font-weight: 500;
 }
 
-.user_container{
+.user_container {
     background-color: #F4F4F4;
     padding: 30px 0px 0px 2%;
     border-radius: 25px;
     margin-top: 10px;
 }
 
-.img_user_container{
+.img_user_container {
     display: flex;
     align-items: center;
     gap: 2%;
 }
 
-.user_avatar{
+.user_avatar {
     width: 170px;
     height: auto;
     border-radius: 50%;
 }
 
-h1{
+h1 {
     font-size: 300%;
 }
 
-.info_container{
+.info_container {
     margin-top: 20px;
     margin-left: 1%;
 }
 
-.info{
+.info {
     display: flex;
     align-items: center;
     gap: 5%;
 }
 
-h2{
+h2 {
     font-size: 200%;
 }
 
-p{
+p {
     padding-top: 6px;
     font-size: 150%;
 }
 
-.ban{
+.ban {
     display: flex;
 }
 
 
-.bton-ban{
+.bton-ban {
     border-radius: 6px;
     font-family: 'Segoe UI';
     font-size: 25px;
@@ -115,7 +115,7 @@ p{
     cursor: pointer;
 }
 
-form{
+form {
     font-size: 12px;
     background-color: #f1efef;
     border-radius: 10px;
@@ -127,87 +127,121 @@ form{
     flex-direction: column;
 }
 
-form p{
+form p {
     padding: 0px;
     margin: 0px;
 }
 
-label{
+form a {
+    display: block;
+    text-align: center;
+}
+
+
+label {
     font-size: medium;
 }
 
-#apply-button{
+#apply-button {
     margin-bottom: 0px;
 }
 
 .window-notice {
-    background: rgba(33, 41, 52, .85);
+    background: rgba(158, 158, 158, .65);
     left: 0;
     bottom: 0;
     right: 0;
     top: 0;
-    display: flex;
     position: fixed;
 }
 
 .content {
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
     display: flex;
-    flex-direction: column;
     position: relative;
-    width: 25%;
+    flex-direction: column;
+    width: 35%;
     padding: 2rem;
     font-size: 1.3rem;
+    border: 3px solid #304C8B;
     border-radius: 20px;
-    top: 30%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+.content-text {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-justify: auto;
+}
 
-@media(max-width:750px){
-    nav{
+.alert_icon {
+    font-size: 100px;
+    color: #304C8B;
+}
+
+.content-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:750px) {
+    nav {
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         padding: 10px 15px;
         gap: 20px;
         font-size: 25px;
     }
 
-    img{
+    img {
         width: 120px;
     }
 
-    .sesion_btn{
+    .sesion_btn {
         flex-direction: row-reverse;
         padding-left: 0px;
         padding-right: 10px;
         border-radius: 18px 8px 8px 18px;
     }
-    
-    .ban{
+
+    .ban {
         flex-direction: column;
     }
-    form{
+
+    form {
         width: 250px;
         margin-left: 1.5%;
     }
 
+    .content-text {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .content-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
-@media(max-width:500px){
-    nav{
+@media(max-width:500px) {
+    nav {
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         padding: 10px 15px;
         gap: 20px;
         font-size: 25px;
     }
-    
-    img{
+
+    img {
         width: 120px;
     }
 
@@ -215,46 +249,51 @@ label{
         align-self: center;
     }
 
-    .sesion_btn{
+    .sesion_btn {
         flex-direction: row-reverse;
         padding-left: 0px;
         padding-right: 10px;
         border-radius: 18px 8px 8px 18px;
     }
 
-    .user_container{
+    .user_container {
         padding: 30px 0px 20px 2%;
     }
 
-    .img_user_container{
+    .img_user_container {
         flex-direction: column;
     }
 
-    .user_avatar{
+    .user_avatar {
         width: 250px;
     }
 
-    h1{
+    h1 {
         margin-bottom: 0;
     }
 
-    .info{
+    .info {
         flex-direction: column;
         align-items: flex-start;
     }
-    p{
+
+    p {
         margin: 0;
     }
 
-    .ban{
+    .ban {
         margin-top: 10px;
         align-items: center;
     }
 
-    .bton-ban{
+    .bton-ban {
         width: 80%;
     }
-    form{
+
+    form {
         align-items: center;
+    }
+    .content {
+        width: 60%;
     }
 }
