@@ -22,17 +22,16 @@ export const defaultR4 = async (req, res) => {
     res.render('register');
 }
 
-export const obtenerNombresDeUsuario = async (req, res) => {
-    try {
-        const usernamesResult = await pool.query("SELECT nombre FROM users");
-        const usernames = usernamesResult.map(row => row.nombre);
-        
-        res.render('admin_main_page', { usernames: usernames });
-    } catch (error) {
-        // Manejo de errores
-        console.error('Error al obtener nombres de usuario:', error);
-        res.status(500).send('Error interno del servidor');
-    }
+export const GetUsername = async (req, res) => {
+    const usernamesResult = await pool.query("SELECT nombre FROM users");
+    const usernames = usernamesResult.map(row => row.nombre);
+    res.render('admin_main_page', { usernames: usernames });
+};
+
+export const BuscarUsername = async (req, res) => {
+    const query = req.query.q;
+    const resultados = await pool.query("SELECT nombre FROM users WHERE nombre LIKE ?", [`${query}%`]);
+    res.json(resultados);
 };
 
 
