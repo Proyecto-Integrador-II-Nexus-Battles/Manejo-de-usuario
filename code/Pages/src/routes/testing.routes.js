@@ -5,7 +5,7 @@ const router = Router();
 router.get('/', defaultR);
 router.get('/admin', getUsername);
 router.get('/buscar_usuario', buscarUsername);
-router.get('/user/:username', getUserInfoController);
+router.get('/:username', getUserInfoController);
 router.get('/register', defaultR4);
 router.post('/registro', registro);
 router.post('/logging', login);
